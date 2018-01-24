@@ -8,7 +8,7 @@ data <- read_excel("tidydata.xlsx", col_names = TRUE)
 # build the scatterplot
 plot <- ggplot(data, aes(x=Growth_Rate, y=Species)) + 
   geom_point(aes(col=Temperature, size=Light_intensity)) +
-  theme_minimal() +
+  theme_bw() +
   scale_size(breaks=c(2500,5000), range = c(5,10)) +
   scale_color_viridis() +
   scale_x_continuous(breaks=seq(-0.8,1.2,0.2), limits = c(-0.8,1.2)) +
